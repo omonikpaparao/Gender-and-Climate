@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics - Code Eclipse</title>
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="imgs/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-box {
+            width: 500px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <!-- Responsive Image -->
+            <img src="imgs/logo.png" alt="Your Image Description" class="header-image">
+            <div class="logo">
+                <h1><span>Code </span>Eclipse<br></h1>
+            </div>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="statistics.html"><i class="fas fa-line-chart"></i> Statistics</a></li>
+                    <li><a href="index.html#contact"><i class="fa fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="data-section" class="section data-section">
+        <div class="container">
+            <h2>Key Statistics on Gender and Climate</h2>
+            <p>Explore gender-disaggregated data on climate resilience and how climate change impacts different genders.</p>
+            <div class="charts-container">
+                <div class="chart-box">
+                    <canvas id="genderClimateBarChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ... (rest of the HTML content remains the same) ... -->
+
+    <script>
+        // Bar Chart
+        const barCtx = document.getElementById('genderClimateBarChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Gender Gap in Climate Resilience',
+                    'Access to Climate Adaptation Resources',
+                    'Gender Disparities in Climate Awareness',
+                    'Participation in Climate Decision-Making',
+                    'Access to Education and Climate Awareness',
+                    'Income and Climate Vulnerability',
+                    'Health Impacts of Climate Change'
+                ],
+                datasets: [{
+                    label: 'Women',
+                    data: [65, 40, 55, 30, 45, 70, 60],
+                    backgroundColor: 'rgba(255, 99, 132, 0.7)',
+                }, {
+                    label: 'Men',
+                    data: [35, 60, 45, 70, 55, 30, 40],
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Gender Inequality in Climate Change Issues (%)',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Percentage'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // Pie Chart
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Women-Led Climate Adaptation Projects',
+                    'Men-Led Climate Adaptation Projects',
+                    'Mixed Leadership Projects'
+                ],
+                datasets: [{
+                    data: [30, 45, 25],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribution of Climate Adaptation Project Leadership',
+                        font: { size: 18 }
+                    },
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+
+<footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="index.html#home" class="footer-link"><i class="fas fa-home"></i> Home</a>
+      <a href="index.html#about" class="footer-link"><i class="fas fa-user"></i> About</a>
+      <a href="statistics.html" class="footer-link"><i class="fas fa-line-chart"></i> Statistics</a>
+      <a href="index.html#contact" class="footer-link"><i class="fa fa-paper-plane"></i> Contact</a>
+    </nav>
+    <br>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/nasa_space_apps_amaravati?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/nasa-space-apps-amaravati/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="footer-copy">&copy; <b>2024 Code Eclipse. All rights reserved.</b></p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>

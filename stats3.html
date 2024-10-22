@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Data Visualization</title>
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="imgs/logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        .chart-container {
+            width: 80%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <!-- Responsive Image -->
+            <img src="imgs/logo.png" alt="Your Image Description" class="header-image">
+            <div class="logo">
+                <h1><span>Code </span>Eclipse<br></h1>
+            </div>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="index.html"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="statistics.html"><i class="fas fa-line-chart"></i> Statistics</a></li>
+                    
+                    <li><a href="index.html#contact"><i class="fa fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="chart-container">
+        <canvas id="genderClimateBarChart1"></canvas>
+    </div>
+    <div class="chart-container">
+        <canvas id="pieChart1"></canvas>
+    </div>
+
+    <script>
+        // CSV data
+        const csvData = `"Category","Quantity"
+"A/I",62571970042.884254
+"A/II",845971956.7544621
+"B/I",108988230.72524966
+"B/II",1646734920.5414727
+"B/III",424123781.16482514
+"C/I",25337937131.07258
+"C/II",402.63264275
+"C/III",-10773.81553105
+"E/I",1347621.56584212
+"F",6994486246.6858835`;
+
+        // Parse the CSV data
+        const parsedData = Papa.parse(csvData, { header: true }).data;
+
+        // Prepare data for the chart
+        const labels = parsedData.map(row => row.Category);
+        const quantities = parsedData.map(row => parseFloat(row.Quantity));
+
+        // Create the bar chart
+        const barCtx = document.getElementById('genderClimateBarChart1').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Quantity',
+                    data: quantities,
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Quantity by Category',
+                        font: {
+                            size: 18
+                        }
+                    },
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Quantity'
+                        },
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return value.toExponential(2);
+                            }
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Category'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Create the pie chart
+        const pieCtx = document.getElementById('pieChart1').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: quantities,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                        'rgba(153, 102, 255, 0.7)',
+                        'rgba(255, 159, 64, 0.7)',
+                        'rgba(199, 199, 199, 0.7)',
+                        'rgba(83, 102, 255, 0.7)',
+                        'rgba(40, 159, 64, 0.7)',
+                        'rgba(210, 199, 199, 0.7)'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Distribution of Quantities by Category',
+                        font: { size: 18 }
+                    },
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed.toExponential(2);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+<footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="index.html" class="footer-link"><i class="fas fa-home"></i> Home</a>
+      <a href="index.html" class="footer-link"><i class="fas fa-user"></i> About</a>
+      <a href="statistics.html" class="footer-link"><i class="fas fa-line-chart"></i> Statistics</a>
+      <a href="index.html#contact" class="footer-link"><i class="fa fa-paper-plane"></i> Contact</a>
+    </nav>
+    <br>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/nasa_space_apps_amaravati?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/nasa-space-apps-amaravati/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="footer-copy">&copy; <b>2024 Code Eclipse. All rights reserved.</b></p>
+  </footer>
+</body>
+</html>

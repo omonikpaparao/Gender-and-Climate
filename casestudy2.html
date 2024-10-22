@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Women’s Climate Justice Initiative</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+            background: linear-gradient(45deg, red, blue, green);
+            font-style: italic;
+        }
+
+        button {
+            margin-left: 50px;
+        }
+        .go-back {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 300px;
+            gap: 20px;
+        }
+
+        /* Container styles */
+        .back {
+            font-weight: bolder;
+            background-color: bisque;
+            border: 2px solid #ccc;
+            border-radius: 15px;
+            padding: 20px;  
+            max-width: 700px;
+            margin: 20px auto;
+            box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease-in-out;
+            animation: slideUp 1.5s ease-in-out;
+            background-size: cover;
+        }
+        .back:hover {
+            transform: scale(1.03);
+        }
+
+        /* Image styles */
+        img {
+            border: 3px solid #444;
+            border-radius: 10px;
+            height: 500px;
+            width: 600px;
+            transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+            margin-right: 60px;
+        }
+        img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Heading styles */
+        h2, h3 {
+            text-align: center;
+            color: #222;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            animation: slideInFromLeft 1.5s ease-out;
+        }
+        .read-more-btn {
+            display: inline-block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: deeppink;
+            color:white;
+            font-weight:bolder;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background  0.4s, transform 0.4s;
+            font-weight: 900;
+        }
+
+        #h2 {
+            border-bottom: 3px solid #444;
+            display: inline-block;
+            padding-bottom: 5px;
+            color: white;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        /* Paragraph and list styles */
+        p, ul {
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 10px 0;
+            padding: 0 15px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Key terms in bold */
+        strong {
+            color: chocolate;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* Button styles */
+        .read-more-btn {
+            display: inline-block;
+            
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: deeppink;
+            color: white;
+            font-weight: bolder;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.4s, transform 0.4s;
+            font-weight: 900;
+        }
+        .read-more-btn:hover {
+            background-color: grey;
+            transform: scale(1.1);
+            color: white;
+            font-weight: bolder;
+            border: 3px solid white;
+        }
+
+        .Container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #img2 {
+            margin-left: 50px;
+            height: 700px;
+            width: 650px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translate(50px); opacity: 0; }
+            100% { transform: translate(0); opacity: 1; }
+        }
+
+        @keyframes slideInFromLeft {
+            0% { transform: translateX(-100px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="go-back">
+        <button class="read-more-btn" onclick="window.location.href='index.html'">
+            <i class="fa fa-arrow-left"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-home"></i>
+          </button>
+          
+
+
+    <h3 id="h2">Case Study: The Intersection of Climate Change and Child Marriage: Impacts on Women and Girls</h3>
+    <br>
+    </div>
+    <div class="Container">
+        <div class="back">
+            <h3>Background</h3>
+            <ul type="square">
+            <li>Child marriage and climate change are interconnected issues that disproportionately affect women and girls.</li>
+            <li>Climate change increases economic vulnerability through crop failures, water scarcity, and natural disasters, often driving families to marry off daughters early as a survival strategy.</li>
+            <li> Displacement and migration due to climate-related disasters heighten the risk of child marriage as families try to protect or reduce the financial burden of caring for their children.</li>
+                <li>This results in disrupted education, loss of autonomy, health risks due to early pregnancies, and a perpetuating cycle of poverty and inequality.
+                    </li>
+                    <li>Addressing this requires gender-sensitive climate adaptation policies, stronger legal protections, educational support, and economic resilience programs for affected families.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="imgs/3.webp" alt="Women’s Climate Justice Initiative">
+        </div>
+        </div>
+    
+        <br><br>
+        <div class="Container">
+            <img src="imgs/1.jpg" id="img2">
+            <div class="back">
+                <h3>Key Findings</h3>
+                <ul>
+                    <li><strong>Education Disruption
+                        :</strong> Climate disasters, such as floods and droughts, disrupt education by destroying schools or making it unsafe for children to travel.
+                        Families in crisis situations are more likely to withdraw girls from school, prioritizing boys’ education when resources are scarce. This limits girls' educational opportunities and increases their chances of being married early.
+                        </li>
+                    <li><strong> Loss of Autonomy and Health Risks
+                        :</strong> Child marriage strips girls of their autonomy, increasing their vulnerability to gender-based violence, early pregnancies, and health complications. Climate change-induced displacement or migration often results in loss of community and social support structures, which exacerbates these issues.
+                        With early pregnancies, young girls face increased health risks, including maternal mortality and complications during childbirth, which are further intensified in communities lacking healthcare due to climate disruptions.
+                        </li>
+                    <!-- <li><strong>Food and Water Insecurity
+                        :</strong> Climate change often results in food and water shortages. Girls are more likely to be married off in such situations as families may view it as one less mouth to feed, or in hopes that the girl will have a more secure life in a marriage.
+                        Lack of food and water can also increase the risk of violence, exploitation, and child marriage as families become more desperate.
+                    </li> -->
+                    <li><strong>Future Generational Impact
+                    :</strong>
+                        Child marriages perpetuate a cycle of poverty and limited opportunity. As the next generation of women is forced into early marriages due to climate pressures, their children also face greater health risks, lack of education, and economic deprivation.
+                    This perpetuates a cycle where each climate shock pushes more families into adopting harmful coping strategies.</li>
+                    </ul>
+            </div>
+        </div>
+
+        
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gender and Climate</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="imgs/logo.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <!-- Logo -->
+            <!-- Responsive Image -->
+            <img src="imgs/logo.png" alt="Your Image Description" class="header-image">
+            <div class="logo">
+                <h1><span>Code </span>Eclipse<br></h1>
+            </div>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="statistics.html"><i class="fas fa-line-chart"></i> Statistics</a></li>
+                    <li><a href="#contact"><i class="fa fa-paper-plane"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+          <h1>Building a Sustainable Future with Gender Equality</h1>
+          <p>Tackling climate change with a gender-inclusive approach for resilient communities.</p>
+          <a href="stats3.html" class="cta-btn">Explore Some Stats</a>
+      </div>
+  </section>
+
+  <section class="overview" id="overview">
+    <div class="container">
+        <h2>Why Gender Matters in Climate Action?</h2>
+        <p class="overview-text">
+            Gender inequality affects different communities experience and respond to climate change. Women and marginalized genders often bear a disproportionate burden in the face of environmental challenges.
+        </p>
+
+        <!-- Toggleable More Information Section -->
+        <div class="more-info" id="more-info">
+            <p>Women make up a large percentage of the agricultural workforce, yet they are often excluded from decision-making roles. Ensuring gender-sensitive policies in climate action can create more resilient communities and foster sustainable solutions.</p>
+        </div>
+
+        <!-- Button to Toggle More Information -->
+        <button class="toggle-btn" id="toggle-btn">Read More</button>
+
+        <!-- Illustration/Image Placeholder -->
+        <div class="illustration">
+            <img src="imgs/ov2.jpg" alt="Gender and Climate Illustration">
+        </div>
+    </div>
+</section>
+
+<!-- Storytelling Section -->
+<section class="storytelling-section" id="stories">
+  <div class="container">
+      <h2>Impactful Case Studies</h2>
+      <p>Real-life stories where gender equality and climate resilience intersect, inspiring change across the globe.</p>
+      
+      <!-- Story Cards -->
+      <div class="stories-container">
+          <!-- Story Card 1 -->
+          <div class="story-card">
+              <div class="story-header">
+                  <h3>Case Study 1: Women farmers in malwi background</h3>
+                  <p class="story-summary">
+                    Empowering women farmers in Malawi with resources and education can enhance resilience to climate change and improve food security.
+                  </p>
+              </div>
+              <div class="story-details" id="story1">
+                  <p>
+                    Empowering women farmers in Malawi with resources and education can enhance resilience to climate change and improve food security.
+                  </p>
+              </div>
+              <button id="s1" class="toggle-story-btn" data-target="story1">Know More</button>
+          </div>
+
+          <!-- Story Card 2 -->
+          <div class="story-card">
+              <div class="story-header">
+                  <h3>Case Study 2: The intersection of climate change and child marriage : Impacts on women and girls.</h3>
+                  <p class="story-summary">
+                    Child marriages perpetuate a cycle of poverty and limited opportunity. As the next generation of women is forced into early marriages.
+                  </p>
+              </div>
+              <div class="story-details" id="story2">
+                  <p>
+                    
+                  </p>
+              </div>
+              <button id="s2" class="toggle-story-btn" data-target="story2">Know More</button>
+          </div>
+      </div>
+  </div>
+</section>
+
+   <!-- Contact Page Section -->
+   <section id="contact">
+  <h1 style="display: block;color: #00bfa5; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold; unicode-bidi: isolate;text-align: center;">Contact Us</h1><br><br>
+
+    <div class="contact-container">
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.574674580118!2d80.49662157438449!3d16.4970605278441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f27d40f21c55%3A0x1490eacd54859850!2sVIT-AP%20University!5e0!3m2!1sen!2sin!4v1728119736789!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+      </div>
+      
+      <div class="form-container">
+        <form action="https://api.web3forms.com/submit" method="POST"  class="contact-form" >
+
+        <!-- Access Key -->
+        <input type="hidden" name="access_key" value="73e7906a-344f-4d72-93a9-a89d0ab06394">
+        <!--Details-->
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+  
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="#home" class="footer-link"><i class="fas fa-home"></i> Home</a>
+      <a href="#about" class="footer-link"><i class="fas fa-user"></i> About</a>
+      <a href="statistics.html" class="footer-link"><i class="fas fa-line-chart"></i> Statistics</a>
+      <a href="#contact" class="footer-link"><i class="fa fa-paper-plane"></i> Contact</a>
+    </nav>
+    <br>
+    <div class="footer-social">
+        <a href="https://www.instagram.com/nasa_space_apps_amaravati?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/nasa-space-apps-amaravati/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p class="footer-copy">&copy; <b>2024 Code Eclipse. All rights reserved.</b></p>
+  </footer>
+
+<!-- Link to FontAwesome for social media icons-->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="script.js"></script>
+
+<script>
+    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting immediately
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(result => {
+            if (result.success) {
+                // Reset the form only after successful submission
+                form.reset();
+                alert("Message sent successfully!");
+            } else {
+                alert("Error sending message.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("Error sending message.");
+        });
+    });
+    document.getElementById("s1").addEventListener("click", function() {
+            window.location.href = "casestudy1.html";  // Replace with your destination page
+        });
+    document.getElementById("s2").addEventListener("click", function() {
+        window.location.href = "casestudy2.html";  // Replace with your destination page
+        });
+</script>
+
+</body>
+</html>

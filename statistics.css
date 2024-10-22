@@ -1,0 +1,329 @@
+.header-image {
+    width: 10%; /* Ensure it doesn't exceed the container width */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Center align if needed */
+    margin-left: 20px ;  /* Adjust the spacing if needed */
+  }
+  
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    }
+    
+    /* Body with Dark Background */
+body {
+      
+    color: #f5f5f5;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0; 
+    background: linear-gradient(125deg, rgba(26, 19, 57, 1) 0%, rgba(5, 0, 18, 1) 100%);
+    }
+    
+    
+    
+    /* Header Styles */
+header {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    }
+    
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+    /* Logo Styling */
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00bfa5; /* Keeping Teal/Green for Climate */ 
+    }
+.logo span {
+    color: #ffd54f; /* Changed to soft amber for better contrast */
+    }
+.logo {
+    transition: 0.3s ease-in-out;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+    
+    /* Navigation Menu */
+nav {
+    font-size: 1rem;
+    }
+    
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+    
+.nav-links li {
+    display: inline;
+}
+    
+.nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+    
+    /* Hover and Active Effects */
+    .nav-links a:hover {
+      background-color: #00bfa5; /* Teal/Green highlight on hover */
+      color: #121212; /* Text turns dark */
+    }
+    
+ /* Contact Section Styles */
+ #contact {
+    padding: 5rem 0;
+    background-image: url('');
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .map-container {
+    flex: 1;
+    max-width: 100%;
+    min-width: 500px; /* Ensure responsiveness */
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    border: none;
+    border-radius: 15px;
+  }
+  
+  .form-container {
+    flex: 1;
+    max-width: 100%;
+    min-width: 500px; /* Ensure responsiveness */
+    background-color: #fff;
+    padding: 2rem;
+    
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 8px #00bfa5, 0 0 16px #00897b, 0 0 24px #00796b;
+    /* Glow effect */
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+  }
+  
+  .form-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #004d40;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form label {
+    font-size: 1rem;
+    color: #004d40;
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #00bfa5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    /* Adding transition for box-shadow */
+  }
+  
+  .submit-btn:hover {
+    background-color: #00897b;
+    /* Apply glow effect on hover */
+  }
+  
+  /* Glow animation for the contact form */
+  @keyframes neonGlow {
+    from {
+      box-shadow:
+        0 0 5px #00bfa5,
+        0 0 10px #00897b,
+        0 0 15px #00796b;
+    }
+  
+    to {
+      box-shadow:
+        0 0 8px #00bfa5,
+        0 0 16px #00897b,
+        0 0 24px #00796b;
+    }
+  }
+  
+  
+  /* Footer styles */
+  .site-footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+  }
+  
+  .footer-nav {
+    display: inline-block;
+    margin-bottom: 10px; /* Space between nav and copyright text */
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px; /* Increased margin for better spacing */
+    position: relative;
+    font-size: 16px; /* Adjust font size as needed */
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
+  }
+  
+  .footer-link i {
+    margin-right: 8px; /* Space between icon and text */
+  }
+  
+  /* Add underline effect */
+  .footer-link::after {
+    content: '';
+    display: block;
+    height: 2px; /* Thickness of the underline */
+    background-color: #fff; /* Color of the underline */
+    position: absolute;
+    bottom: -5px; /* Position it below the text */
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-link:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+  }
+  
+  /* Add glow effect */
+  .footer-link:hover {
+    color: #f7f7f7; /* Slightly lighter color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    text-shadow: 0 0 10px #00bfa5, 0 0 20px #00a98f, 0 0 30px #009980, 0 0 40px #008e75; /* Green glow effect */
+  }
+  
+  
+  /* Footer Social Media Links */
+  .footer-social a {
+    color: #b3b3b3;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #00bfa5; /* Teal hover effect */
+  }
+  /* Data Section */
+.data-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.data-section h2 {
+    font-size: 2rem;
+    color: #00bfa5; /* Teal/Green */
+    margin-bottom: 20px;
+}
+
+/* Section Description */
+.data-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #b3b3b3; /* Light gray text */
+}
+
+/* Charts Container */
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Chart Box */
+.chart-box {
+    width: 100%;
+    max-width: 450px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Image Styling */
+.chart-image {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.chart-box:hover .chart-image {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .charts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
