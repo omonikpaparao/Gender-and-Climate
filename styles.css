@@ -315,7 +315,7 @@
     
     /* Storytelling Section */
     .storytelling-section {
-        background-image: url('imgs/case_studies.jpg');
+        background-image: url('case_studies.jpg');
         background-size: cover; /* Ensures the image covers the entire section */
         background-position: center; /* Centers the image */
         background-repeat: no-repeat; /* Prevents the image from repeating */
